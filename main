@@ -1,0 +1,11 @@
+#include "header.h"
+int main()
+{
+	int target = 15;
+	int a[] = { 1, 3, 5, 7, 9, 13, 15, 23, 27 };
+	int lenght = sizeof(a) / sizeof(int);
+	int t = binary_search(a, target, lenght);
+	printf("mid = %d\n", t);
+	system("pause");
+	return 0;
+}
