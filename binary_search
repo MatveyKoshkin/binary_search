@@ -1,0 +1,22 @@
+#include <stdio.h>
+int binary_search(int* a, int target, int lenght)
+{
+	printf("lenght %d\n", lenght);
+	int min = 0;
+	int max = lenght - 1;
+	while (min <= max)
+	{
+		int mid = (min + max) / 2;
+		printf("mid = %d\n", mid);
+		if (target < a[mid])
+		{
+			max = mid - 1;
+		}
+		else if (target > a[mid])
+		{
+			min = mid + 1;
+		}
+		else return mid;
+	}
+	return -1;
+}
